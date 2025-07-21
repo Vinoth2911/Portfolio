@@ -1,0 +1,349 @@
+
+
+<!-- FULL HTML CODE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://static.vecteezy.com/system/resources/thumbnails/024/100/116/small_2x/blue-purple-black-dark-grainy-gradient-color-background-noise-texture-effect-web-banner-abstract-design-copy-space-photo.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+    }
+
+    header, footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ffcccb;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 1rem;
+      min-height: calc(100vh - 100px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 1);
+      color: #fff;
+      padding: 5rem 2rem;
+      width: 95%;
+      max-width: 1000px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 18px;
+      margin: 3rem auto;
+      border: 10px solid #111;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      animation: slideIn 1s ease;
+      border-bottom: 3px solid #00bfff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-group {
+      text-align: left;
+      margin: 1.2rem 0;
+    }
+
+    .skill-group h3 {
+      color: #00bfff;
+      margin-bottom: 0.4rem;
+      font-size: 1.3rem;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: 0.3rem;
+    }
+
+    .skill-group p {
+      margin: 0;
+      font-size: 1rem;
+      color: #f2f2f2;
+    }
+
+    #home h2 {
+      font-size: 3rem;
+      animation: zoomIn 2s ease-in-out;
+    }
+
+    #home .intro {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+    }
+
+    #home .icons {
+      margin-top: 1.5rem;
+    }
+
+    #home .icons a {
+      color: #ffcccb;
+      margin: 0 10px;
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    #home .icons a:hover {
+      color: #ffffff;
+    }
+
+    #home button {
+      padding: 0.75rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 1rem;
+      background-color: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    #home button:hover {
+      background-color: #a80000;
+    }
+
+    #about p {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 2rem;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+
+    footer {
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    footer a {
+      color: #ffcccb;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        display: none;
+      }
+      .mobile-nav {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0.5rem;
+        border-top: 1px solid #ccc;
+      }
+      .mobile-nav a {
+        color: #fff;
+        font-size: 0.9rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#internships">Internships</a>
+<a href="#projects">Project</a>
+      <a href="#contact">Contact</a>
+
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="content-box">
+      <h2>Welcome to My Portfolio</h2>
+      <p class="intro">I'm <strong>VINOTH V</strong>, <em>B.TECH IT Graduate</em></p>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/vinoth-v-a0a941251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Vinoth2911/" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <button onclick="window.open('resume.pdf', '_blank')">Download CV</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content-box">
+      <h2>About Me</h2>
+      <p>I am an enthusiastic and hardworking IT graduate with strong programming skills and experience in developing both frontend and backend web applications.</p>
+      <p>I have hands-on knowledge in Java, Spring Framework, React JS, HTML, CSS, and databases like MySQL.</p>
+      <p>I enjoy building projects that solve real-world problems and have experience using tools like Eclipse, VS Code, Postman, and Tomcat server.</p>
+      <p>I’m always eager to learn new things and want to be part of a team where I can grow and contribute my skills effectively.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="content-box">
+      <h2>My Skills</h2>
+      <div class="skill-group">
+        <h3>Programming Languages:</h3>
+        <p>Java</p>
+      </div>
+      <div class="skill-group">
+        <h3>Frameworks:</h3>
+        <p>Spring (Core, MVC, Boot)</p>
+      </div>
+      <div class="skill-group">
+        <h3>Web Technologies:</h3>
+        <p>HTML, CSS, JavaScript, React JS, JSP, JSTL</p>
+      </div>
+      <div class="skill-group">
+        <h3>Database:</h3>
+        <p>MySQL, JDBC</p>
+      </div>
+      <div class="skill-group">
+        <h3>Tools:</h3>
+        <p>Eclipse, Visual Studio Code, Postman</p>
+      </div>
+    </div>
+  </section>
+
+<section id="internships">
+  <div class="content-box">
+    <h2>Internship Experience</h2>
+
+    <div style="text-align: left; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; margin-bottom: 2rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); line-height: 1.8rem;">
+      <h3 style="color: #00bfff; margin-bottom: 1rem; text-align: center;">Hackwit Technology Pvt. Ltd. - Web Developer Intern</h3>
+      <p>Developed a dynamic restaurant website with user authentication and content display features.</p>
+      <p>Built using HTML, CSS, JavaScript, React JS for the frontend.</p>
+      <p>Implemented user authentication to allow secure login and registration.</p>
+      <p>Created pages to display the menu, about us, and other restaurant details.</p>
+      <p>Used MongoDB as the database.</p>
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="https://github.com/Vinoth2911/Restaurant-Website.git" target="_blank" style="color: #00ffcc; font-size: 1.1rem; font-weight: bold; text-decoration: underline;">View Project</a>
+      </p>
+    </div>
+
+    <div style="text-align: left; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); line-height: 1.8rem;">
+      <h3 style="color: #00bfff; margin-bottom: 1rem; text-align: center;">Hackwit Technology Pvt. Ltd. - React JS Intern</h3>
+      <p>Developed a full-stack e-commerce website for selling watches with separate user and admin modules.</p>
+      <p>Features include user/admin login, product listing by category, add/remove products, and add to cart.</p>
+      <p>Built using React JS (frontend), Node.js with Express (backend), and MongoDB for data storage.</p>
+      <p>Stores cart items, user details, and ordered products in MongoDB.</p>
+      <p>Admin can manage products and view order details.</p>
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="https://github.com/Vinoth2911/Ecommerce-.git" target="_blank" style="color: #00ffcc; font-size: 1.1rem; font-weight: bold; text-decoration: underline;">View Project</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+<section id="projects">
+  <div class="content-box">
+    <h2>Projects</h2>
+
+    <div style="text-align: left; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.6); line-height: 1.8rem; margin-top: 1.5rem;">
+      <h3 style="color: #00bfff; text-align: center; margin-bottom: 1rem;">Advanced Anomaly Detection in Cellular Network Traffic Integrating Machine Learning and Human Expertise</h3>
+      <p>An advanced system for detecting anomalies in cellular network traffic by combining machine learning algorithms with human expert insights for improved accuracy and reliability.</p>
+      <p>The project enhances traditional anomaly detection by integrating expert-driven rules with AI techniques to adaptively learn from traffic patterns.</p>
+      <p>Technologies used include Python, Scikit-learn, TensorFlow, and visualization with Plotly or Dash for real-time anomaly reporting dashboards.</p>
+      <p style="text-align: center; margin-top: 1rem;">
+        <a href="https://github.com/Vinoth2911/Anamoly-Detection.git" target="_blank" style="color: #00ffcc; font-size: 1.1rem; font-weight: bold; text-decoration: underline;">View Project</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+  <div class="content-box" style="background: #ffffff10; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.6); width: 90%; max-width: 600px; text-align: center;">
+    <h2 style="color: #00bfff; text-shadow: 2px 2px 4px black; border-bottom: 2px solid #00bfff; padding-bottom: 0.5rem; margin-bottom: 2rem;">Contact Me</h2>
+
+    <form action="https://formspree.io/f/movljwpk" method="POST">
+      <div style="text-align: left; margin-bottom: 1rem;">
+        <label for="name" style="color: #fff;">Your Name</label>
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.7rem; border: none; border-radius: 8px; margin-top: 5px;">
+      </div>
+
+      <div style="text-align: left; margin-bottom: 1rem;">
+        <label for="email" style="color: #fff;">Your Email</label>
+        <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 0.7rem; border: none; border-radius: 8px; margin-top: 5px;">
+      </div>
+
+      <div style="text-align: left; margin-bottom: 1rem;">
+        <label for="message" style="color: #fff;">Your Message</label>
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.7rem; border: none; border-radius: 8px; margin-top: 5px;"></textarea>
+      </div>
+
+      <button type="submit" style="background-color: #00bfff; color: white; padding: 0.8rem 2rem; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; box-shadow: 2px 2px 10px black;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/vinoth-v-a0a941251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    <a href="https://github.com/Vinoth2911/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+  </footer>
+
+  <div class="mobile-nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#internships">Intern</a>
+    <a href="#contact">Contact</a>
+<a href="#projects">Project</a>
+
+  </div>
+</body>
+</html>
